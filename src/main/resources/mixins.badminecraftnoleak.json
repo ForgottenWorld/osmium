@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "mixins.badminecraftnoleak.refmap.json",
   "mixins": [
-    "network.play.ServerPlayNetHandlerMixin"
+    "network.play.ServerPlayNetHandlerMixin",
+    "tileentity.BellTileEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
