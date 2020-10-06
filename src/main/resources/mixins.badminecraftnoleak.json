@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "it.forgottenworld.enduvar.badminecraftnoleak.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "mixins.badminecraftnoleak.refmap.json",
+  "mixins": [
+    "network.play.ServerPlayNetHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
