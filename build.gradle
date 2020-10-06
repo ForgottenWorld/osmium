@@ -1,0 +1,106 @@
+buildscript {
+    repositories {
+        maven { url = 'https://files.minecraftforge.net/maven' }
+        maven {
+            name = 'sponge'
+            url = 'https://repo-new.spongepowered.org/repository/maven-public/'
+        }
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
+
+group = 'it.forgottenworld.enduvar'
+version = '0.0.1'
+archivesBaseName = 'badminecraftnoleak'
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+
+minecraft {
+    mappings channel: 'snapshot', version: '20200916-1.16.2'
+
+    // Default run configurations.
+    // These can be tweaked, removed, or duplicated as needed.
+    runs {
+        client {
+            workingDirectory project.file('run')
+            arg "-mixin.config=mixins."+archivesBaseName+".json"
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                badminecraftnoleak {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+            arg "-mixin.config=mixins."+archivesBaseName+".json"
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                badminecraftnoleak {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+
+            args '--mod', 'badminecraftnoleak', '--all', '--output', file('src/generated/resources/')
+
+            mods {
+                badminecraftnoleak {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.16.3-34.1.10'
+
+    compile 'org.spongepowered:mixin:0.8.1'
+}
+
+jar {
+    manifest.attributes(
+            'MixinConfigs': "mixins.badminecraftnoleak.json",
+            'FMLCorePluginContainsFMLMod': 'true',
+    )
+}
+
+
+jar.finalizedBy('reobfJar')
+
+sourceSets {
+    main {
+        ext.refMap = "mixins.badminecraftnoleak.refmap.json"
+    }
+}

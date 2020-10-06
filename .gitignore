@@ -1,0 +1,17 @@
+*
+!*/
+
+# need gradle
+!gradle/**
+!build.gradle
+!gradlew
+!gradlew.bat
+
+!/src/**
+
+# include markdowns
+!LICENSE
+!README.md
+
+# include git important files
+!.gitignore
