@@ -4,6 +4,8 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "mixins.badminecraftnoleak.refmap.json",
   "mixins": [
+    "entity.ai.goal.OwnerHurtByTargetGoalMixin",
+    "entity.ai.goal.TargetGoalMixin",
     "network.play.ServerPlayNetHandlerMixin",
     "tileentity.BellTileEntityMixin"
   ],
