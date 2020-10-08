@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "mixins.badminecraftnoleak.refmap.json",
   "mixins": [
+    "entity.ai.goal.CreeperSwellGoalMixin",
     "entity.ai.goal.DefendVillageTargetGoalMixin",
     "entity.ai.goal.OwnerHurtByTargetGoalMixin",
     "entity.ai.goal.TargetGoalMixin",
