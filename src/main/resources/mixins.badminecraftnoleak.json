@@ -9,6 +9,7 @@
     "entity.ai.goal.GoalMixin",
     "entity.ai.goal.LandOnOwnersShoulderGoalMixin",
     "entity.ai.goal.LeapAtTargetGoalMixin",
+    "entity.ai.goal.NearestAttackableTargetGoalMixin",
     "entity.ai.goal.OwnerHurtByTargetGoalMixin",
     "entity.ai.goal.TargetGoalMixin",
     "network.play.ServerPlayNetHandlerMixin",
