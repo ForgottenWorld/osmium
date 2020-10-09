@@ -1,8 +1,8 @@
 {
   "required": true,
-  "package": "it.forgottenworld.enduvar.badminecraftnoleak.mixin",
+  "package": "it.forgottenworld.enduvar.osmium.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "mixins.badminecraftnoleak.refmap.json",
+  "refmap": "mixins.osmium.refmap.json",
   "mixins": [
     "entity.ai.goal.CreeperSwellGoalMixin",
     "entity.ai.goal.DefendVillageTargetGoalMixin",

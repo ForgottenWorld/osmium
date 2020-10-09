@@ -19,7 +19,7 @@ apply plugin: 'org.spongepowered.mixin'
 
 group = 'it.forgottenworld.enduvar'
 version = '0.0.1'
-archivesBaseName = 'badminecraftnoleak'
+archivesBaseName = 'osmium'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
@@ -40,7 +40,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                badminecraftnoleak {
+                osmium {
                     source sourceSets.main
                 }
             }
@@ -57,7 +57,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                badminecraftnoleak {
+                osmium {
                     source sourceSets.main
                 }
             }
@@ -72,10 +72,10 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'badminecraftnoleak', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'osmium', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                badminecraftnoleak {
+                osmium {
                     source sourceSets.main
                 }
             }
@@ -91,7 +91,7 @@ dependencies {
 
 jar {
     manifest.attributes(
-            'MixinConfigs': "mixins.badminecraftnoleak.json",
+            'MixinConfigs': "mixins.osmium.json",
             'FMLCorePluginContainsFMLMod': 'true',
     )
 }
@@ -101,6 +101,6 @@ jar.finalizedBy('reobfJar')
 
 sourceSets {
     main {
-        ext.refMap = "mixins.badminecraftnoleak.refmap.json"
+        ext.refMap = "mixins.osmium.refmap.json"
     }
 }

@@ -1,4 +1,4 @@
-package it.forgottenworld.enduvar.badminecraftnoleak.mixin.tileentity;
+package it.forgottenworld.enduvar.osmium.mixin.tileentity;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.tileentity.BellTileEntity;

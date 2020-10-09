@@ -1,4 +1,4 @@
-package it.forgottenworld.enduvar.badminecraftnoleak.mixin.network.play;
+package it.forgottenworld.enduvar.osmium.mixin.network.play;
 
 import net.minecraft.network.play.ServerPlayNetHandler;
 import net.minecraft.tileentity.SignTileEntity;

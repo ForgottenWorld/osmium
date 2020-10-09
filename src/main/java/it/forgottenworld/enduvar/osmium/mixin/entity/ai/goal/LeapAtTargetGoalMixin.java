@@ -1,4 +1,4 @@
-package it.forgottenworld.enduvar.badminecraftnoleak.mixin.entity.ai.goal;
+package it.forgottenworld.enduvar.osmium.mixin.entity.ai.goal;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.LeapAtTargetGoal;
