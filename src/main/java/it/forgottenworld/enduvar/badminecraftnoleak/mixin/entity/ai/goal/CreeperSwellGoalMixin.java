@@ -15,7 +15,7 @@ public abstract class CreeperSwellGoalMixin {
     @Shadow @Final private CreeperEntity swellingCreeper;
 
     @Inject(method = "resetTask", at = @At(value = "HEAD"))
-    private void hasRaidersNearby(CallbackInfo ci) {
+    private void onResetTask(CallbackInfo ci) {
         this.swellingCreeper.setAttackTarget(null);
     }
 }
