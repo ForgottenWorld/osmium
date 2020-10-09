@@ -12,6 +12,7 @@
     "entity.ai.goal.NearestAttackableTargetGoalMixin",
     "entity.ai.goal.OwnerHurtByTargetGoalMixin",
     "entity.ai.goal.OwnerHurtTargetGoalMixin",
+    "entity.ai.goal.RangedAttackGoalMixin",
     "entity.ai.goal.TargetGoalMixin",
     "network.play.ServerPlayNetHandlerMixin",
     "tileentity.BellTileEntityMixin"
